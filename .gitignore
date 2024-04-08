@@ -1,0 +1,13 @@
+#git rm -r --cached .
+#git add .
+#git commit -m "Removing all files in .gitignore"
+
+# Folders remove
+#app/__pycache__
+
+# Ignore files with extension mp3 & .exe
+*.exe
+*.mp3
+
+# File
+down_mp3.py
