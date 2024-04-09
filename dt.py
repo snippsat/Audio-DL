@@ -6,8 +6,8 @@ app = typer.Typer()
 @app.command()
 def download_video(
     url: str,
-    writethumbnail: bool = typer.Option(True, "--writethumbnail", "-wt", help="Write thumbnai "),
-    audio_quality: str = typer.Option("192", "--audio_quality", "-pq", help="Audio quality(eg 256 or 320)"),
+    writethumbnail: bool = typer.Option(True, "--writethumbnail", "-wt", help="Write thumbnail to disk"),
+    preferredquality: str = typer.Option("192", "--preferredquality", "-pq", help="Preferred audio quality(eg 256 or 320)"),
 ):
     '''Youtube MP3 download'''
     ydl_opts = {
@@ -15,8 +15,8 @@ def download_video(
         'writethumbnail': writethumbnail,
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
-            'preferredcodec': 'mp3',
-            'audio_quality': audio_quality,
+            'preferredcodec': 'm4a',
+            'preferredquality': preferredquality,
         }],
         'outtmpl': '%(title)s.%(ext)s',
     }

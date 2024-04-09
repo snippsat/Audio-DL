@@ -8,6 +8,7 @@
 # Ignore files with extension mp3 & .exe
 *.exe
 *.mp3
+*.m4a
 
 # File
 down_mp3.py
