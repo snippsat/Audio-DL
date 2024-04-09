@@ -9,7 +9,7 @@ def download_video(
     url: str,
     writethumbnail: bool = typer.Option(True, "--writethumbnail", "-wt", help="Write thumbnail to disk as a separate file"),
     preferredquality: str = typer.Option("192", "--preferredquality", "-pq", help="Preferred audio quality ('192' or '256')"),
-    preferredcodec: str = typer.Option("mp3", "--preferredcodec", "-pc", help="Preferred audio codec (aac, m4a, mp3, mp4, ogg, wav, webm)"),
+    preferredcodec: str = typer.Option("mp3", "--preferredcodec", "-pc", help="Preferred audio codec (m4a, mp3, mp4, webm)"),
 ):
     '''Youtube MP3 download'''
     ydl_opts = {
